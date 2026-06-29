@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+const API_URL = "https://ai-powered-virtual.onrender.com";
 function Login({ onLogin }) {
   const [isRegister, setIsRegister] = useState(false);
   const [isForgotPassword, setIsForgotPassword] = useState(false);
@@ -22,7 +23,7 @@ function Login({ onLogin }) {
     setLoading(true);
 
     if (isForgotPassword) {
-      fetch('/api/auth/forgot-password', {
+      fetch(`${API_URL}/api/auth/forgot-password`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -57,7 +58,9 @@ function Login({ onLogin }) {
       return;
     }
 
-    const endpoint = isRegister ? '/api/auth/register' : '/api/auth/login';
+    const endpoint = isRegister
+  ? `${API_URL}/api/auth/register`
+  : `${API_URL}/api/auth/login`;
     const bodyData = isRegister 
       ? { name, email, password, branch, year: parseInt(year) }
       : { email, password };
