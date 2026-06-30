@@ -3,7 +3,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://ai-powered-virtual.onrender.com/api/:path*"
+      "destination": "https://ai-powered-virtual-snwj.onrender.com/api/:path*"
     },
     {
       "source": "/(.*)",
