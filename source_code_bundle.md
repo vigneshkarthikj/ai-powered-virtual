@@ -1,3 +1,4 @@
+{% raw %}
 # Source Code Bundle
 
 This document contains the complete code for all new and modified files in both the frontend and backend. You can use this to review, copy, or verify the code on your end.
@@ -1773,3 +1774,5 @@ function Planner({ user, headers }) {
 export default Planner;
 ```
 ````
+
+{% endraw %}
